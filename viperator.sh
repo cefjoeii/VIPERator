@@ -7,7 +7,7 @@
 today=$(date +'%-m/%-d/%y')
 year=$(date +'%Y')
 default_project='Project'
-default_author='Ceferino Jose II'
+default_author=$(id -u -n)
 default_org='Organization'
 
 while read -r -p 'VIPER Module Name: ' viper && [[ -z "$viper" ]] ; do
