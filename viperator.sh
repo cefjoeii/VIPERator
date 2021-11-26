@@ -47,12 +47,12 @@ echo "//
 
 import UIKit
 
-// MARK: - View Output (Presenter -> View)
+// MARK: - View Input (Presenter -> View)
 protocol ${viper}Viewable: AnyObject {
     
 }
 
-// MARK: - View Input (View -> Presenter)
+// MARK: - View Output (View -> Presenter)
 protocol ${viper}ViewPresentable {
     func viewDidLoad()
 }
