@@ -4,10 +4,10 @@
 # Created by Ceferino Jose II on 11/3/21.
 # Copyright © 2021 Ceferino Jose II
 
-today=$(date +'%-m/%-d/%y')
+today=$(date +'%d/%m/%y')
 year=$(date +'%Y')
 default_project='Project'
-default_author=$(id -u -n)
+default_author=$(id -P $(stat -f%Su /dev/console) | awk -F '[:]' '{print $8}')
 default_org='Organization'
 
 while read -r -p 'VIPER Module Name: ' viper && [[ -z "$viper" ]] ; do
